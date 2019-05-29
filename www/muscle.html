@@ -1,0 +1,23 @@
+<ion-view view-title="Muscle Involved" hide-nav-bar="true">
+<ion-content has-bouncing="false">
+
+<img src="img/bodyparts.jpg" class="full-image">
+
+<h4 class="title_orange"><b>{{data.bodypart_name}}</b></h4>
+<h6 class="text-center" style="color: #9e9e9e;padding: 0; margin: 0;"><i class="icon ion-ios-minus-empty"></i><i class="icon ion-ios-minus-empty"></i><i class="icon ion-ios-minus-empty"></i></h6>
+
+    <div class="row" style="flex-wrap: wrap;">
+    <div class="col col-50 col-res-33" ng-repeat="item in data_exercises_bodyparts" ng-if="data.bodypart_id==item.exercises_bodyparts_bodypart_id">
+    <div class="card" style="border: 1px solid #e9e9e9; border-radius: 4px; box-shadow: none;">
+        <a class="item item-thumbnail item-light" href="#/tab/ebdetail/{{item.id_exercise}}" style="padding: 10px;"> 
+      <img src="{{imagesfolder}}/{{item.exercise_image}}" class="full-image">
+    </a>
+      <div class="item item-divider" style="font-size: 13px; background-color: #f8f8f8; border: 1px solid #eee; border-radius: 4px; margin: 5px;    padding: 8px;">
+    {{item.exercise_title}}
+  </div>
+    </div>
+</div>
+</div>
+ 
+</ion-content>
+</ion-view>

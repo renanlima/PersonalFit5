@@ -1,0 +1,81 @@
+<ion-view view-title="Exercise Details">
+
+<ion-content has-bouncing="false">
+<div id="details">
+<div class="row responsive-lg" style="flex-wrap: wrap">
+<div class="col col-50" style="padding: 0">
+
+<div class="video-container">
+<iframe ng-src="{{getIframeSrc(video.id.exercise_video)}}" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+
+<div class="col col-50">
+<div class="padding" style="padding-top: 10px">
+
+<h3 class="text-center">{{data.exercise_title}}</h3>
+<h6 class="text-center" style="color: #9e9e9e;padding: 0; margin: 0;"><i class="icon ion-ios-minus-empty"></i><i class="icon ion-ios-minus-empty"></i><i class="icon ion-ios-minus-empty"></i></h6>
+
+</div>
+
+<div class="row" style="flex-wrap: wrap;">
+
+
+<div class="col col-50 col-res-33">
+
+<a class="item item-avatar">
+      <img src="img/dificult.png" style="border-radius: 0;"> 
+      <h2>Dificuldade</h2>
+      <p>{{data.exercise_dificult}}</p>
+
+    </a>
+
+</div>
+
+<div class="col col-50 col-res-33">
+
+<a class="item item-avatar">
+      <img src="img/chrono.png" style="border-radius: 0;"> 
+      <h2>Resistência</h2>
+      <p>{{data.exercise_time}} Seg</p>
+
+    </a>
+
+</div>
+
+<div class="col col-50 col-res-33">
+
+<a class="item item-avatar">
+      <img src="img/sets.png" style="border-radius: 0;"> 
+      <h2>Série</h2>
+      <p>{{data.exercise_sets}}</p>
+
+    </a>
+
+</div>
+
+
+<div class="col col-50 col-res-33">
+
+<a class="item item-avatar">
+      <img src="img/reps.png" style="border-radius: 0;"> 
+      <h2>Repetições</h2>
+      <p>{{data.exercise_reps}}</p>
+
+    </a>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<h4 class="custom_title text-center">Passos</h4>
+
+<p ng-bind-html="data.exercise_steps" class="padding"></p>
+
+</ion-content>
+</ion-view>

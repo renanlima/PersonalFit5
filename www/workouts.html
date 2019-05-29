@@ -1,0 +1,21 @@
+<ion-view view-title="Workouts" hide-nav-bar="true">
+<ion-content has-bouncing="false">
+
+<img src="img/workouts.jpg" class="full-image">
+
+<div ng-repeat="item in workouts | unique:'workout_id'" style="padding: 0px 5px 0px 5px; margin-bottom: 5px;">
+
+<div class="custom_card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{imagesfolder}}/{{item.workout_cover}}') {{backgroundStyle}};">
+  <div class="custom_card-category">{{item.workout_goals}}</div>
+  <div class="custom_card-description">
+    <h2 ng-bind-html="item.workout_title"></h2>
+    <p>{{item.workout_duration}}</p>
+  </div>
+  <div ng-class="{'custom_card_diffculty_b': item.workout_diffculty === 'Beginner', 'custom_card_diffculty_i': item.workout_diffculty === 'Intermediate', 'custom_card_diffculty_a': item.workout_diffculty === 'Advanced'}">Dificuldade</div>
+  <a class="custom_card-link" href="#/tab/routine/{{item.workout_id}}" ></a>
+</div>
+
+</div>
+
+</ion-content>
+</ion-view>

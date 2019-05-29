@@ -1,0 +1,30 @@
+<ion-view view-title="Store" hide-nav-bar="true">
+<ion-content has-bouncing="false" lazy-scroll>
+
+<img src="img/store.jpg" class="full-image">
+
+<div class="padding">
+  <div class="button-bar" style="padding-bottom: 10px;">
+  <a class="button button-small button-outline button-assertive" href="#/tab/categories">Categorias</a>
+</div>
+
+
+<a ng-repeat="item in products" style="text-decoration: none;" href="#/tab/product/{{item.id}}">
+<div class="row product_div">
+  <div class="col col-33">
+    <img src="{{imagesfolder}}/{{item.product_image}}" class="full-image product_image" image-lazy-loader="spiral">
+  </div>
+  <div class="col col-67">
+    <h2 class="product_title" ng-bind-html="item.product_title"></h2>
+    <span class="product_price assertive">{{item.product_price}}</span>
+    <span class="product_save">Economize {{item.product_save}}</span><br/>
+    <span class="product_shipping balanced">{{item.product_shipping}}</span><br/>
+    <img class="product_rating" src="img/rating.png">
+  </div>
+<div class="product_label">Ver produto</div>
+</div>
+
+</a>
+
+</ion-content>
+</ion-view>

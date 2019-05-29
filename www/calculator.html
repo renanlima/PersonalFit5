@@ -1,0 +1,103 @@
+<ion-view view-title="Calculator" hide-nav-bar="true">
+<ion-content has-bouncing="false">
+
+<img src="img/calculator.jpg" class="full-image">
+<div class="padding">
+
+<div class="list" style="margin-bottom: 0px;">
+  <!--<label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" id="user_name" ng-model="user.name" placeholder="">
+  </label>-->
+
+  <div class="row" style="padding: 0px">
+
+  <div class="col col-50" style="padding: 0px">
+  <label class="item item-input">
+    <span class="input-label">Idade</span>
+    <input type="number" id="user_id" ng-model="user.age" placeholder="">
+  </label>
+  </div>
+
+  <div class="col col-50" style="padding: 0px">
+  <label class="item item-input">
+    <span class="input-label">Altura</span>
+    <input type="number" id="user_height" ng-model="user.height" placeholder="">
+  </label>
+  </div>
+
+ </div>
+
+  <label class="item item-input">
+    <span class="input-label">Peso</span>
+    <input type="number" ng-model="user.weight" id="user_weight" placeholder="">
+  </label>
+
+ </div>
+    
+
+
+        
+<label class="item item-input item-select">
+    <div class="input-label">
+     Gênero
+    </div>
+
+   <select name="" id="user_sex">   
+                    <option value="">Selecione</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Feminino</option>
+                </select>
+  </label>
+
+        
+<label class="item item-input item-select">
+    <div class="input-label">
+    Nível de atividade física
+    </div>
+    
+            <select name="" id="" ng-model="user.activityLevel" ng-change="{{updateNutrition()}}">
+                <option value="">Selecione</option>
+                <option ng-repeat="activityLevel in activityLevels" value="{{activityLevel.value}}">{{activityLevel.title}}</option>
+            </select>
+</label>
+
+<div class="padding">
+    <h4><span class="assertive">{{getName()}} </span>Seu BMR é: <span class="assertive">{{getMetaRate()}}</span></h4>
+</div>
+</input></div>
+</div> <div class="padding">
+    
+      
+            <table class="ui unstackable table">
+                <thead>
+                    <th>Tabela</th>
+                      <th class="left aligned" ng-repeat="goal in goals">{{goal.title}}</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="left aligned">Calories:</td>
+                        <td ng-repeat="goal in goals" >{{goal.calories | number:0}}</td>
+                    </tr>
+                    <tr class="left aligned">
+                        <td>Proteína</td>
+                        <td ng-repeat="goal in goals" >{{goal.protein | number:0}}</td>
+                    </tr>
+                    <tr class="left aligned">
+                        <td>Gordura</td>
+                        <td ng-repeat="goal in goals">{{goal.fats | number:0}}</td>
+                    </tr>
+                    <tr class="left aligned">
+                        <td>Carboidrato:</td>
+                        <td ng-repeat="goal in goals">{{goal.carbs | number:0}}</td>
+                    </tr>
+                </tbody>
+            </table>
+<h5><span class="assertive"><b>A</b></span> Para manter o pesso atual</h5>
+<h5><span class="assertive"><b>B</b></span> Para perder peso</h5>
+<h5><span class="assertive"><b>C</b></span> Para ganhar peso</h5>
+</div>
+
+</div>
+</ion-content>
+</ion-view>

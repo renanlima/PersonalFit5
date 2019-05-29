@@ -1,0 +1,20 @@
+<ion-view view-title="Store" hide-nav-bar="true">
+<ion-content has-bouncing="false">
+
+<img src="img/store.jpg" class="full-image">
+
+
+<div class="row" style="flex-wrap: wrap;">
+    <div class="col col-33" ng-repeat="item in categories_products">   
+      <div class="custom_div">
+      <a href="#/tab/browsecat/{{item.categories_products_id}}">
+      <img src="{{imagesfolder}}/{{item.categories_products_image}}" class="full-image custom_image">
+      <h5 ng-bind-html="item.categories_products_title"></h5>
+    </a>
+    </div>
+
+    </div>
+</div>
+
+</ion-content>
+</ion-view>

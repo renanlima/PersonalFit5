@@ -1,0 +1,66 @@
+<ion-view view-title="Sign Up" hide-nav-bar="true" class="signup_page" hide-tabs>
+    <ion-content has-bouncing="false">
+
+        <img src="img/logo_white.png" class="logo">
+
+        <div class="text">
+            <h4>Cadastro rápido</h4>
+        </div>
+
+        <div class="padding">
+            <form name="Form" class="padding" novalidate>
+                <div class="list list-inset">
+
+                    <label class="item-input">
+                        <i class="icon ion-android-person placeholder-icon"></i>
+                        <input type="text" placeholder="Nome" ng-model="subscriber.subscriber_name" required>
+                    </label>
+
+                    <label class="item-input">
+                        <i class="icon ion-android-calendar placeholder-icon"></i>
+                        <input type="number" placeholder="Idade" ng-model="subscriber.subscriber_age" ng-minlength="2" ng-maxlength="2" required>
+                    </label>
+
+                    <label class="item-input">
+                        <i class="icon ion-android-mail placeholder-icon"></i>
+                        <input type="email" placeholder="Email" ng-model="subscriber.subscriber_email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" ng-minlength="5" required>
+                    </label>
+
+                    <label class="item-input item-select">
+                        <i class="icon ion-heart placeholder-icon"></i>
+                        <div class="input-label"> 
+                            Genero
+                        </div>
+                        <select ng-model="subscriber.subscriber_gender" required>
+                            <option value="Male">Homem</option>
+                            <option value="Female">Mulher</option>
+                        </select>
+                    </label>
+
+                    <label class="item-input item-select" style="border-bottom: 0px;">
+                        <i class="icon ion-disc placeholder-icon"></i>
+                        <div class="input-label"> 
+                            Objetivo
+                        </div>
+                        <select ng-model="subscriber.subscriber_goal" required>
+                            <option value="Build Muscle">Construir músculos</option>
+                            <option value="Lost Fat">Perder peso</option>
+
+                        </select>
+                    </label>
+
+                    <button class="button button-outline button-block button-assertive" ng-click="savesubscriber()" style="border-radius: 25px;">Entrar</button>
+
+
+                </div>
+            </form>
+
+            <!--<a class="thanks" href="#/tab/home">No, Thanks</a>-->
+
+            <br/><a class="terms" href="#/tab/terms/0">Se cadastrando você aceita nossos <b>termos e condições de uso.</b></a>
+
+        </div>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,73 @@
+<ion-view view-title="Diet Plan Detail" hide-nav-bar="true">
+<ion-content has-bouncing="false">
+
+<div class="header_card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('{{imagesfolder}}/{{data.diet_image}}');">
+  <div class="header_card-description">
+    <h2 ng-bind-html="data.diet_title"></h2>
+    <p><span class="light">Objetivo: </span>{{data.diet_type}}</p>
+  </div>
+</div>
+
+<h4 class="custom_title text-center" style="padding-top: 15px;">Plano de dieta</h4>
+
+<p class="product_description padding" ng-bind-html="data.diet_description"></p>
+
+<h4 class="custom_title text-center">lista</h4>
+
+<p class="product_description" style="padding: 10px 25px;" ng-bind-html="data.diet_list"></p>
+
+
+<h4 class="custom_title text-center">Informação nutricional</h4>
+
+<div class="row padding" style="flex-wrap: wrap;">
+
+
+<div class="col col-50 col-res-25">
+
+<a class="chart_circle">
+      <p>{{data.diet_calories}}</p>
+</a>
+<h2 class="chart_title">Calorias</h2>
+
+</div>
+
+<div class="col col-50 col-res-25">
+
+<a class="chart_circle">
+      <p>{{data.diet_carbs}}g</p>
+</a>
+<h2 class="chart_title">Carbs</h2>
+
+</div>
+
+<div class="col col-50 col-res-25">
+
+<a class="chart_circle">
+      <p>{{data.diet_protein}}g</p>
+    </a>
+<h2 class="chart_title">Proteinas</h2>
+
+</div>
+
+
+<div class="col col-50 col-res-25">
+
+<a class="chart_circle">
+      <p>{{data.diet_fat}}g</p>
+    </a>
+ <h2 class="chart_title">Gordura</h2>
+
+</div>
+
+
+ <div class="button-bar padding">
+  <a class="button button-small button-outline button-stable" href="#/tab/calculator">
+Calcule seu BMR !</a>
+</div>
+
+
+</div>
+
+
+</ion-content>
+</ion-view>

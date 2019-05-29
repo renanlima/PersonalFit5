@@ -1,0 +1,21 @@
+<ion-view view-title="Equipments" hide-nav-bar="true">
+<ion-content has-bouncing="false">
+
+<img src="img/equipments.jpg" class="full-image">
+
+<div class="row" style="flex-wrap: wrap;">
+    <div class="col col-33 col-res-33" ng-repeat="item in equipments">
+    <div class="card" style="border: 1px solid #e9e9e9; border-radius: 4px; box-shadow: none;">
+        <a class="item item-thumbnail item-light" href="#/tab/machine/{{item.id}}" style="padding: 10px;"> 
+      <img src="{{imagesfolder}}/{{item.equipment_thumbnail}}" class="full-image">
+    
+      <div class="item item-divider" style="font-size: 13px; background-color: #f8f8f8; border: 1px solid #eee; border-radius: 4px; margin: 5px;    padding: 8px;">
+    {{item.equipment_name}}
+  </div>
+  </a>
+    </div>
+</div>
+</div> 
+
+</ion-content>
+</ion-view>

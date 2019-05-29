@@ -1,0 +1,54 @@
+<ion-view view-title="Product" hide-nav-bar="true">
+<ion-content has-bouncing="false">
+
+<img src="img/store.jpg" class="full-image">
+<div class="padding">
+<a class="product_category_detail assertive" href="#/tab/browsecat/{{data.product_category}}" ng-bind-html="data.category_name"></a>
+
+<h4 ng-bind-html="data.product_title"></h4>
+<img class="product_rating_detail" src="img/rating.png">
+</div>
+
+<img src="{{imagesfolder}}/{{data.product_image}}" class="full-image product_image_detail" />
+
+<div class="padding">
+
+<h3 style="font-size: 18px">Preço <b>{{data.product_price}}</b> <span class="product_save_detail assertive"> Economize:  {{data.product_save}} </span></h3>
+<b>Shipping:</b> {{data.product_shipping}} · 
+<b ng-class="{'balanced': data.product_stock === 'In Stock', 'red': data.product_stock === 'Out Of Stock'}">{{data.product_stock}}</b>
+
+
+<br/><br/><h5 class="custom_title text-center">Sobre</h5><br/>
+
+<p class="product_description" ng-bind-html="data.product_description"></p>
+
+
+<a ng-click="openWindow(post)" class="button custom_button_size icon-left ion-ios-cart button-small button-outline button-assertive">
+  <b>Comprar agora</b>
+</a>
+
+</div>
+
+<h5 class="custom_title text-center">Produtos que você também vai gostar</h5>
+
+<div class="padding">
+<a ng-repeat="item in products" ng-if="params.id != item.id && data.product_category == item.product_category" style="text-decoration: none;" href="#/tab/product/{{item.id}}">
+<div class="row product_div">
+  <div class="col col-33">
+    <img src="{{imagesfolder}}/{{item.product_image}}" class="full-image product_image">
+  </div>
+  <div class="col col-67">
+    <h2 class="product_title">{{item.product_title}}</h2>
+    <span class="product_price assertive">{{item.product_price}}</span>
+    <span class="product_save">Save {{item.product_save}}</span><br/>
+    <span class="product_shipping balanced">{{item.product_shipping}}</span><br/>
+    <img class="product_rating" src="img/rating.png">
+  </div>
+<div class="product_label">Ver produto</div>
+</div>
+
+</a>
+</div>
+
+</ion-content>
+</ion-view>

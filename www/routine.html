@@ -1,0 +1,57 @@
+<ion-view view-title="Workout Details" hide-nav-bar="true">
+<ion-content has-bouncing="false">
+
+<div ng-repeat="item in workouts | unique:'workout_id'" ng-if="params.workout_id==item.workouts_exercises_workout_id">
+
+<div class="header_card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{imagesfolder}}/{{item.workout_cover}}');">
+  <div class="header_card-description">
+    <h2 ng-bind-html="item.workout_title"></h2>
+    <p>{{item.workout_duration}}</p>
+  </div>
+</div>
+
+<div class="row" style="flex-wrap: wrap;">
+
+<div class="col col-50">
+<a class="item item-avatar">
+      <img src="img/muscle.png" style="border-radius: 0;">
+      <h2>Objetivos</h2>
+      <p style="overflow: visible;">{{item.workout_goals}}</p>
+</a>
+
+</div>
+
+
+
+<div class="col col-50 col-res-50">
+
+<a class="item item-avatar">
+      <img src="img/dificult.png" style="border-radius: 0;"> 
+      <h2>Dificuldades</h2>
+      <p>{{item.workout_diffculty}}</p>
+  </a>
+
+</div>
+</div>
+
+<p class="padding" ng-bind-html="item.workout_description"></p>
+
+</div>
+
+<h4 class="custom_title text-center">Exercícios</h4>
+
+    <div class="row" style="flex-wrap: wrap;">
+    <div class="col col-50 col-res-33" ng-repeat="item in data_workouts_exercises" ng-if="params.workout_id==item.workouts_exercises_workout_id">
+    <div class="card" style="border: 1px solid #e9e9e9; border-radius: 4px; box-shadow: none;">
+        <a class="item item-thumbnail item-light" href="#/tab/wedetail/{{item.w_id_exercise}}" style="padding: 10px;"> 
+      <img src="{{imagesfolder}}/{{item.exercise_image}}" class="full-image">
+    </a>
+      <div class="item item-divider" style="font-size: 13px; background-color: #f8f8f8; border: 1px solid #eee; border-radius: 4px; margin: 5px; padding: 8px; text-align: center;">
+    {{item.exercise_sets}} Séries / {{item.exercise_reps}} Repetições
+  </div>
+    </div>
+</div>
+</div>
+ 
+</ion-content>
+</ion-view>

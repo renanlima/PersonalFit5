@@ -1,0 +1,25 @@
+<ion-view view-title="About Us" hide-nav-bar="true">
+<ion-content has-bouncing="false" class="padding">
+
+<img src="./img/logo.png" class="logo-image">
+
+
+
+<br/><h5 class="custom_title text-center"><b>Sobre nós</b></h5>
+
+<p class="text-center">{{data.about_app}}</p>
+
+<br/><h5 class="custom_title text-center"><b>Siga nossas mídias sociais</b></h5>
+
+<div class="button-bar padding">
+  <a ng-click="facebook(post)" class="button button-small icon-left ion-social-facebook button-clear button-assertive">Facebook</a>
+  <a ng-click="twitter(post)" class="button button-small icon-left ion-social-twitter button-clear button-assertive">Twitter</a>
+  <a ng-click="instagram(post)" class="button button-small icon-left ion-social-instagram button-clear button-assertive">Instagram</a>
+</div>
+
+<div class="padding">
+<button class="button button-block icon-left ion-android-share-alt button-assertive" ng-click="OtherShare()">Compartilhe!</button>  
+</div>
+
+</ion-content>
+</ion-view>

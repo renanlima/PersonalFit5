@@ -1,0 +1,20 @@
+<ion-view view-title="Muscles Group" hide-nav-bar="true">
+<ion-content has-bouncing="false">
+
+<img src="img/bodyparts.jpg" class="full-image">
+
+
+<div class="row" style="flex-wrap: wrap;">
+    <div class="col col-33" ng-repeat="item in bodyparts">   
+      <div class="custom_div">
+      <a href="#/tab/muscle/{{item.id}}">
+      <img src="{{imagesfolder}}/{{item.bodypart_thumbnail}}" class="full-image custom_image">
+      <h5>{{item.bodypart_name}}</h5>
+    </a>
+    </div>
+
+    </div>
+</div>
+
+</ion-content>
+</ion-view>
