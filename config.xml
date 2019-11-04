@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="personalfit.br.com.zmaximus" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="personalfit.br.com.zmaximus" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>PersonalFIT</name>
     <description />
     <author email="contato@zmaximus.com.br" href="http://zmaximus.com.br" />
@@ -23,6 +23,28 @@
     <preference name="android-targetSdkVersion" value="28" />
     <preference name="android-installLocation" value="auto" />
     <preference name="phonegap-version" value="cli-7.1.0" />
+	
+	
+	<!-- iOS only preferences -->
+<preference name="EnableViewportScale" value="true"/>
+<preference name="MediaPlaybackAllowsAirPlay" value="false"/>
+<preference name="MediaPlaybackRequiresUserAction" value="true"/>
+<preference name="AllowInlineMediaPlayback" value="true"/>
+<preference name="BackupWebStorage" value="local"/>
+<preference name="TopActivityIndicator" value="white"/>
+<preference name="SuppressesIncrementalRendering" value="true"/>
+<preference name="GapBetweenPages" value="0"/>
+<preference name="PageLength" value="0"/>
+<preference name="PaginationBreakingMode" value="page"/>
+<preference name="PaginationMode" value="unpaginated"/>
+<preference name="UIWebViewDecelerationSpeed" value="fast" />
+<preference name="target-device" value="universal" />
+<preference name="deployment-target" value="10" />
+<preference name="CordovaWebViewEngine" value="CDVUIWebViewEngine" />
+<preference name="CordovaDefaultWebViewEngine" value="CDVUIWebViewEngine" />
+<preference name="SuppressesLongPressGesture" value="true" />
+<preference name="Suppresses3DTouchGesture" value="true" />
+	
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
